@@ -205,6 +205,7 @@
 {
 	NSMutableIndexSet * result = [NSMutableIndexSet indexSet];
 	NSUInteger numPerRow = [self numberOfItemsPerRow];
+	NSParameterAssert(numPerRow > 0);
 	
 	for ( NSUInteger i = 0; i < _numberOfItems; i++ )
 	{
