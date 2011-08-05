@@ -178,6 +178,10 @@
 	if (0 == rows) {
 		rows = 1;
 	}
+	
+	if (0 == _numberOfItems)
+		return 1;
+	
 	NSUInteger cols = _numberOfItems / rows;
 	if ( _numberOfItems % rows != 0 )
 		cols++;
