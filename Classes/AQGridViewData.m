@@ -171,13 +171,17 @@
 - (NSUInteger) numberOfItemsPerRow
 {
 	if ( _layoutDirection == AQGridViewLayoutDirectionVertical )
-		return ( (NSUInteger)floorf(_boundsSize.width / _actualCellSize.width) );
+		return ( (NSUInteger)roundf(_boundsSize.width / _actualCellSize.width) );
 	
 	// work out how many rows we can fit
 	NSUInteger rows = (NSUInteger)floorf(_boundsSize.height / _actualCellSize.height);
 	if (0 == rows) {
 		rows = 1;
 	}
+	
+	if (0 == _numberOfItems)
+		return 1;
+	
 	NSUInteger cols = _numberOfItems / rows;
 	if ( _numberOfItems % rows != 0 )
 		cols++;
