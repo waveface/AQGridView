@@ -1710,6 +1710,7 @@ passToSuper:
 			[_visibleCells removeObjectsAtIndexes: toRemove];
 			[toRemove release];
 			[seen release];
+			[animatingDestinationIndices release];
 		}
 		
 		if ( [_visibleCells count] < [newVisibleIndices count] )

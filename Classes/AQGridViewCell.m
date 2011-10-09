@@ -138,6 +138,7 @@
 		addedView.backgroundColor = [UIColor whiteColor];
 		
 		[self setContentView:addedView];
+		[addedView release];
 		
 	}
 	return ( _contentView );
