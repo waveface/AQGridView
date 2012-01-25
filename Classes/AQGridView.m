@@ -237,7 +237,7 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 
 - (NSUInteger) numberOfRows
 {
-	return ( _gridData.numberOfItems / _flags.numColumns );
+	return ( _gridData.numberOfItems / MAX(1, _flags.numColumns) );
 }
 
 - (BOOL) allowsSelection
